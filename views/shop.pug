@@ -1,0 +1,20 @@
+extends layouts/main-layout.pug 
+block styles 
+    link(rel="stylesheet", href="/css/product.css")
+block content 
+    main
+        if prods.length > 0
+            .grid
+                each product in prods 
+                    artical.card.product-item
+                        header.card__header
+                            h1.product_title #{product.title}
+                        div.card__image
+                            img(src="https://png.pngtree.com/png-clipart/20190604/original/pngtree-small-seedlings-png-image_1532593.jpg" alt="book" height="100px" width="100px")
+                        div.card__content
+                            h2.product__price $45.59
+                            p.product__description A very Intresting Book to read for the Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt facilis voluptate cupiditate optio quos eos    
+                            .card__action
+                                button.btn add to cart
+        else
+            p No Products Found
