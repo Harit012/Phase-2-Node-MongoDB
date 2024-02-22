@@ -201,4 +201,8 @@ form {
   #side-menu-toggle {
     display: none;
   }
+
+  .centered{
+    text-align: center;
+  }
 }
